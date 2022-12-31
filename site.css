@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+
+*, body, html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    padding: 5px;
+}
+
+.header {
+    font-family: 'Cinzel Decorative', cursive; 
+    font-size: 5vw;
+
+    font-weight: normal;
+}
+
+.headerInfoBox {
+    display: grid;
+    grid-template-areas: 'vol copyright date spacer price';
+
+    width: 100%;
+    height: auto;
+
+    box-shadow: 0 1px 0 #000 inset, 0 -1px 0 #000 inset;
+}
+
+.headerInfoBox, * {
+    margin: 0 !important;
+}
+
+.body {
+    display: grid;
+
+    grid-template-columns: 1.5fr 3.5fr 3fr;
+}
+
+.midStory {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.twoColumStory {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.authors {
+    font-weight: bold;
+    text-align: center;
+}
+
+@media only screen and (max-width: 425px){
+	.body {
+        grid-template-columns: 1fr;
+    }
+
+    .midStory {
+        grid-template-columns: 1fr;
+    }
+
+    .twoColumStory {
+        grid-template-columns: 1fr;
+    }
+
+    .hiddenOnMobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .showOnlyOnDesktop {
+        display: none;
+    }
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+h3 {
+    padding: 5px;
+    margin: 0;
+}
+
+hr {
+    padding: 0;
+    margin: 0;
+}
