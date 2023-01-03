@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="/site.css">
+        <link rel="stylesheet" href="site.css">
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </head>
@@ -22,14 +22,15 @@
                     <h1 class="header" style="flex: 5;">The Pony Express</h1>
                     <p style="flex: 1; font-size: 0.7vw;" >
                         WEATHER <br/>
+                        <span id="js-weather">
                         Today, Cloudy, breezy, drizzly, mild, chance of rain, high 10. Tonight, foggy, low 2. Tomorrow
-                        chance of snow, cooler, sunny, clear, high 5. Weather map on accuweather.com <a onclick="trans()" href="javascript:void(0);">Translate to Neighlish</a>
+                        chance of snow, cooler, sunny, clear, high 5. Weather map on accuweather.com</span> <a onclick="trans()" href="javascript:void(0);">Translate to Neighlish</a>
                     </p>
                 </div>
                 <div class="headerInfoBox">
-                    <p>VOL. CLXVII ... No 57,851</p>
+                    <p id="js-volume">VOL. CLXVII ... No 57,851</p>
                     <p style="font-size: 10px;" class="align-middle hiddenOnMobile">The Pony Express Company</p>
-                    <p>PONY PLANET, FRIDAY, DECEMBER 30, 2022</p>
+                    <p id="js-date">PONY PLANET, FRIDAY, DECEMBER 30, 2022</p>
                     <div style="width: 100%;"></div>
                     <p class="text-end hiddenOnMobile">$3.00</p>
                 </div>
@@ -37,16 +38,16 @@
 
             <div class="body">
                 <div>
-                    <h2>Shamudy considers draft</h2>
+                    <h2 id="js-header1">Shamudy considers draft</h2>
                     <hr>
-                    <h3>Unrest among the whales</h3>
+                    <h3 id="js-header2">Unrest among the whales</h3>
                     <hr>
                     <p>
-                        <div class="authors">
+                        <div id="js-authors1" class="authors">
                             By FIONA THORNTON <br/>
                             and OWEN SILVA
                         </div>
-                        <p>
+                        <p id="js-content1">
                             SHAKIR -- This week Shamudy, leader of the whales, announced he was considering a draft. If he were to go ahead with one it would make the 
                             whales the first animal nation within the Grand Army Of the United Animals, and even the United Animals, to utilise a draft for their military.
                             This would likely drop his approval ratings, which have sat at an amazing 98% for the entirety of his presidency - a stark contrast when compared with
@@ -64,27 +65,27 @@
                 </div>
 
                 <div>
-                    <img src="shark.jpg" style="width: 100%; aspect-ratio: 1.2/1; object-fit: cover;">
+                    <img id="js-midImg" src="shark.jpg" style="width: 100%; aspect-ratio: 1.2/1; object-fit: cover;">
                     <p style="font-size: 10px;" class="text-end">Lisa Sterling/Shark Stock</p>
                     <hr/>
                     <h2>Opinion: Cookie should be impeached</h2>
                     <div class="midStory">
                         <div class="text-center">
                             <hr />
-                            <strong>By SPRITE THORN</strong>
-                            <p class="text-start">
+                            <strong id="js-author">By SPRITE THORN</strong>
+                            <p class="text-start" id="js-midText1">
                                 Pony Planet -- Today, cookie should be impeached. Now that's not just my opinion: it's the opinion of hundreds more. Cookies latest
                                 approval rating in the polls was an abysmal 33%! That's lower than the Choclate Administrations approval rating was at
                                 any point during her run - the lowest being 58% (If we can trust that number).
                             </p>
                         </div>
-                        <p>
+                        <p id="js-midText2">
                             Cookie has proven again and again she is not cut out for the presidency. And the public wants a president they elected for once
                             not someone who was chosen for them and has no idea what they are doing. Cookie eliminating public transport, her domestic security
                             policies - replacing the Pony Planet National Guard with the Royal Army, a unit focused on lethality, for counter-terrorism - and 
                             her handling of the 
                         </p>
-                        <p>
+                        <p id="js-midText3">
                             second animal war has left much to be desired. So, now that the Prisoner Of War scandals are flying I say impeach her, get her out and
                             get a democratically elected president in that office for the first time in the history of Pony Planet. Get a president that will give us
                             the first consecutive years of peace Pony Planet has ever seen.
@@ -124,6 +125,34 @@
                 </div>
             </div>
         </div>
+
+        <script type="module"> 
+            import { articles } from './content/index.js';
+
+            window.onload = () => {
+                console.assert(articles != null);
+
+                fetch(`./content/${articles[articles.total]}`).then(raw => raw.json().then(data => {
+                    document.getElementById('js-volume').innerText = data.volume;
+                    document.getElementById('js-date').innerText = data.date;
+                    document.getElementById('js-weather').innerText = data.weather;
+
+                    document.getElementById('js-header1').innerText = data.leftArticle.title;
+                    document.getElementById('js-header2').innerText = data.leftArticle.subheading;
+                    document.getElementById('js-authors1').innerText = data.leftArticle.authors;
+                    document.getElementById('js-content1').innerText = data.leftArticle.content;
+
+                    console.log(data.middleArticle.content.length / 3);
+                    console.log( (data.middleArticle.content.length / 3) * 2)
+                    console.log(data.middleArticle.content.length)
+                    document.getElementById('js-midImg').src = data.middleArticle.imageURL;
+                    document.getElementById('js-author').innerText = data.middleArticle.author;
+                    document.getElementById('js-midText1').innerText = data.middleArticle.content.substr(0, data.middleArticle.content.length / 3);
+                    document.getElementById('js-midText2').innerText = data.middleArticle.content.substr(data.middleArticle.content.length / 3, data.middleArticle.content.length / 1.5);
+                    document.getElementById('js-midText3').innerText = data.middleArticle.content.substr((data.middleArticle.content.length / 3) * 2, data.middleArticle.content.length);
+                }));
+            }
+        </script>
 
         <script type="module">
             import dictionary from 'https://sharks-interactive.github.io/Silveny-Speech/dictionary.js';
