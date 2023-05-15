@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>The Pony Express</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="site.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div>
+            <div>
+                <div class="d-flex">
+                    <h1 class="header" style="flex: 5;">The Pony Express</h1>
+                    <p style="flex: 1; font-size: 0.7vw;" >
+                        WEATHER <br/>
+                        <span id="js-weather">
+                        Today, Cloudy, breezy, drizzly, mild, chance of rain, high 10. Tonight, foggy, low 2. Tomorrow
+                        chance of snow, cooler, sunny, clear, high 5. Weather map on accuweather.com</span> <a onclick="trans()" href="javascript:void(0);">Translate to Neighlish</a>
+                    </p>
+                </div>
+                <div class="headerInfoBox">
+                    <p id="js-volume">VOL. CLXVII ... No 57,851</p>
+                    <p style="font-size: 10px;" class="align-middle hiddenOnMobile">The Pony Express Company</p>
+                    <p id="js-date">PONY PLANET, FRIDAY, DECEMBER 30, 2022</p>
+                    <div style="width: 100%;"></div>
+                    <p class="text-end hiddenOnMobile">$3.00</p>
+                </div>
+            </div>
+
+            <div class="body">
+                <div>
+                    <h2 id="js-header1">Shamudy considers draft</h2>
+                    <hr>
+                    <h3 id="js-header2">Unrest among the whales</h3>
+                    <hr>
+                    <p>
+                        <div id="js-authors1" class="authors">
+                            By FIONA THORNTON <br/>
+                            and OWEN SILVA
+                        </div>
+                        <p id="js-content1">
+                            SHAKIR -- This week Shamudy, leader of the whales, announced he was considering a draft. If he were to go ahead with one it would make the 
+                            whales the first animal nation within the Grand Army Of the United Animals, and even the United Animals, to utilise a draft for their military.
+                            This would likely drop his approval ratings, which have sat at an amazing 98% for the entirety of his presidency - a stark contrast when compared with
+                            Cookie's current 33% approval rating - and drop it. 
+                            <br>
+                            <br>
+                            &nbsp;&nbsp;Shamudy has been seen as an incredibly benevolent and well liked leader, however many whales feel that 
+                            they did not need to get involved in this second great animal war and are not interested in fighting it. Shelia Pearsons, a mother of 2, told us that despite
+                            the recent attacks within the whale's borders by the Aligned Animals - the first in history - she still supported staying out of the war, "We've fought and supported the
+                            West's wars for how many years now? We protect all the ocean animals, we need to focus on that and our own security as a nation before we get involved in a war
+                            the horses started." Despite Shamudy being a founding member in the Grand Army Of the United Animals and their model 'an attack on one is an attack on all' modelled after
+                            a human Treaty Organisation, the Whale's involvement is heavily contested.
+                        </p>
+                    </p>
+                </div>
+
+                <div>
+                    <img id="js-midImg" src="shark.jpg" style="width: 100%; aspect-ratio: 1.2/1; object-fit: cover;">
+                    <p style="font-size: 10px;" class="text-end">Lisa Sterling/Shark Stock</p>
+                    <hr/>
+                    <h2>Opinion: Cookie should be impeached</h2>
+                    <div class="midStory">
+                        <div class="text-center">
+                            <hr />
+                            <strong id="js-author">By SPRITE THORN</strong>
+                            <p class="text-start" id="js-midText1">
+                                Pony Planet -- Today, cookie should be impeached. Now that's not just my opinion: it's the opinion of hundreds more. Cookies latest
+                                approval rating in the polls was an abysmal 33%! That's lower than the Choclate Administrations approval rating was at
+                                any point during her run - the lowest being 58% (If we can trust that number).
+                            </p>
+                        </div>
+                        <p id="js-midText2">
+                            Cookie has proven again and again she is not cut out for the presidency. And the public wants a president they elected for once
+                            not someone who was chosen for them and has no idea what they are doing. Cookie eliminating public transport, her domestic security
+                            policies - replacing the Pony Planet National Guard with the Royal Army, a unit focused on lethality, for counter-terrorism - and 
+                            her handling of the 
+                        </p>
+                        <p id="js-midText3">
+                            second animal war has left much to be desired. So, now that the Prisoner Of War scandals are flying I say impeach her, get her out and
+                            get a democratically elected president in that office for the first time in the history of Pony Planet. Get a president that will give us
+                            the first consecutive years of peace Pony Planet has ever seen.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h1>MOOSE AGREE TO NEGOTIATIONS, PROMPTING OUTRAGE</h1>
+                    <hr>
+                    <h3>Unanimous vote declines</h3>
+                    <hr>
+                    <div class="twoColumStory">
+                        <p>
+                            MEEDRA -- After Grand Army Of the United Animals military analysts repeatedely informed the public, and congressional bodies of several animal nations,
+                            that the Moose and Aligned Animals would not consider negotiations because of their recent victories and current combat dominance over the United Animals
+                            especially on the Moose's capitol planet, Meedra, where 50k prisoners from the 2nd Armoured Dinosaur Division reside, the Moose have announced they are open
+                            to negotiations today. Public polling on Pony Planet shows significant disapproval of a peaceful end to this war whereas support is higher in other nations.
+                            <br>
+                            <br>
+                            &nbsp;&nbsp;The Aligned Animals made their requests to the GAOUA today, stating they wanted complete control and juridstiction of Pony Planet and its inhabitants for a cease-fire.
+                            Cookie has assured the public that these terms would not be accepted and a unanimous vote among GAUOA leadership determined they would ignore the current terms.
+                            Cookie used this chance to quietly slip another 40 Trillion Dollars in funding for the Grand Army Of the United Horses by, paying for another 350 CookieBot fighter ships
+                            to be constructed by the end of the first week of Janurary in her continued attempts to rebuild the GAOUH and increase Pony Planets contribution to the second great animal
+                            war which is currently being fought and orchestrated primarily by the Grand Army of the Dinosaurs and the Grand Army of the Whales.
+                        </p>
+                        <p>
+                            &nbsp; &nbsp;The GAOUA made a statement today claiming that they were, "not willing to give up any amount of land which belongs to nations under the GAUOA." Effectively telling the
+                            Aligned Animals they were not interested. On the same day the United Animals lost 300,000 service members and an estimated 128 combat ships, with fears that the fighting around
+                            Meedra will turn into a squall line.
+                            <br>
+                            <br>
+                            &nbsp;&nbsp;Propoganda from the Aligned Animals publicly shamed the GAOUA for not accepting, 'their only method of preventing total destruction.' The Aligned Animals renewed their promise
+                            they would treat any defectors with care, and that any citizens of any nation willing to make the trip would be accepted into their military.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module"> 
+            import { articles } from './content/index.js';
+
+            window.onload = () => {
+                console.assert(articles != null);
+
+                fetch(`./content/${articles[articles.total]}`).then(raw => raw.json().then(data => {
+                    document.getElementById('js-volume').innerText = data.volume;
+                    document.getElementById('js-date').innerText = data.date;
+                    document.getElementById('js-weather').innerText = data.weather;
+
+                    document.getElementById('js-header1').innerText = data.leftArticle.title;
+                    document.getElementById('js-header2').innerText = data.leftArticle.subheading;
+                    document.getElementById('js-authors1').innerText = data.leftArticle.authors;
+                    document.getElementById('js-content1').innerText = data.leftArticle.content;
+
+                    console.log(data.middleArticle.content.length / 3);
+                    console.log( (data.middleArticle.content.length / 3) * 2)
+                    console.log(data.middleArticle.content.length)
+                    document.getElementById('js-midImg').src = data.middleArticle.imageURL;
+                    document.getElementById('js-author').innerText = data.middleArticle.author;
+                    document.getElementById('js-midText1').innerText = data.middleArticle.content.substr(0, data.middleArticle.content.length / 3);
+                    document.getElementById('js-midText2').innerText = data.middleArticle.content.substr(data.middleArticle.content.length / 3, data.middleArticle.content.length / 1.5);
+                    document.getElementById('js-midText3').innerText = data.middleArticle.content.substr((data.middleArticle.content.length / 3) * 2, data.middleArticle.content.length);
+                }));
+            }
+        </script>
+
+        <script type="module">
+            import dictionary from 'https://sharks-interactive.github.io/Silveny-Speech/dictionary.js';
+
+            const outputField = document.getElementById('js-output-trans');
+
+            const getPrefix = (i, words) =>
+                (i == 0 || words[i - 1] == ' ') ? '' : ' '; // No previous char
+
+            function translate() {
+                document.querySelectorAll('*').forEach(elm => {
+                    if (!['P', 'H2', 'H1', 'H3', 'STRONG'].includes(elm.tagName)) return;
+                    console.log(elm.tagName)
+                    const words = elm.innerText.split(' ');
+                    var output = '';
+
+                    for (let z = 0; z < words.length; z++) {
+                        let element = filterPunctuation(words[z]);
+                        output += getPrefix(z, words) + findValueByKey(element[0]) + element[1];
+                    }
+                    elm.innerText = output;
+                });
+            }
+            window.trans = translate;
+
+            function findValueByKey(searchKey) {
+                let result = dictionary[searchKey.toLowerCase()];
+
+                if (result) return searchKey.charAt(0).toUpperCase() != searchKey.charAt(0) ? result.charAt(0).toLowerCase() + result.substr(1) : result; 
+
+                return searchKey;
+            }
+
+            function filterPunctuation(string) {
+                let punc = "";
+
+                [ '.', ',', '?', '!', ';', ].forEach(element => {
+                    if (string.includes(element)) {
+                        string = string.replaceAll(element, '');
+                        punc = element;
+                    }
+                });
+
+                return [string, punc];
+            }
+        </script>
+    </body>
+</html>
