@@ -48,6 +48,12 @@
     text-align: center;
 }
 
+@media only screen and (max-width: 2000px){
+    .midStory {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media only screen and (max-width: 1000px){
 	.body {
         grid-template-columns: 1fr;

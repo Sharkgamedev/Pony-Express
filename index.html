@@ -113,9 +113,15 @@
                 document.getElementById('js-author').innerText = data.middleArticle.author;
                 document.getElementById('js-midTitle').innerText = data.middleArticle.heading;
 
-                document.getElementById('js-midText1').innerText = data.middleArticle.content.substr(0, data.middleArticle.content.length / 3);
-                document.getElementById('js-midText2').innerText = data.middleArticle.content.substr(data.middleArticle.content.length / 3, data.middleArticle.content.length / 1.5);
-                document.getElementById('js-midText3').innerText = data.middleArticle.content.substr((data.middleArticle.content.length / 3) * 2, data.middleArticle.content.length);
+                if (window.matchMedia("(min-width: 2000px)")) {
+                    document.getElementById('js-midText1').innerText = data.middleArticle.content.substr(0, data.middleArticle.content.length / 3);
+                    document.getElementById('js-midText2').innerText = data.middleArticle.content.substr(data.middleArticle.content.length / 3, data.middleArticle.content.length / 1.5);
+                    document.getElementById('js-midText3').innerText = data.middleArticle.content.substr((data.middleArticle.content.length / 3) * 2, data.middleArticle.content.length);
+                }
+                else {
+                    document.getElementById('js-midText1').innerText = data.middleArticle.content.substr(0, data.middleArticle.content.length / 2);
+                    document.getElementById('js-midText2').innerText = data.middleArticle.content.substr(data.middleArticle.content.length / 2, data.middleArticle.content.length / 2);
+                }
 
                 document.getElementById('js-rightTitle').innerText = data.rightArticle.title;
                 document.getElementById('js-rightSubhead').innerText = data.rightArticle.subheading;
