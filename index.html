@@ -125,8 +125,8 @@
 
                 document.getElementById('js-rightTitle').innerText = data.rightArticle.title;
                 document.getElementById('js-rightSubhead').innerText = data.rightArticle.subheading;
-                document.getElementById('js-rightText1').innerText = data.rightArticle.content.substr(0, data.rightArticle.content.length / 1.3);
-                document.getElementById('js-rightText2').innerText = data.rightArticle.content.substr(data.rightArticle.content.length / 1.3, data.rightArticle.content.length);
+                document.getElementById('js-rightText1').innerText = data.rightArticle.content.substr(0, data.rightArticle.content.length / 2);
+                document.getElementById('js-rightText2').innerText = data.rightArticle.content.substr(data.rightArticle.content.length / 2, data.rightArticle.content.length);
             
                 currentId = id;
             }));
