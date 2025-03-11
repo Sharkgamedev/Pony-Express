@@ -48,8 +48,10 @@
         width: 100%;
         display: flex;
 
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+
+        gap: 5%;
 
         margin: 0;
         padding: 0;
@@ -66,7 +68,8 @@
       text-decoration: none;
       list-style: none;
 
-      font-size: 1.5em;
+      font-size: 1.2em;
+      font-weight: normal !important;
 
       color: black;
     }

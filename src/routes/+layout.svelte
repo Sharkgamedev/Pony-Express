@@ -7,6 +7,8 @@
     <span>
         <Navbar></Navbar>
 
+        <div style="min-height: 25px"></div>
+
         <slot />
     </span>
 
