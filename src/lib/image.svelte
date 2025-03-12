@@ -21,5 +21,10 @@
         max-width: 100%;
         height: auto;
     }
+
+    a {
+        color: black;
+        font-weight: normal;
+    }
 </style>
 

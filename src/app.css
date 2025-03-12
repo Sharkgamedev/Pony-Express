@@ -32,4 +32,9 @@ a {
 
     font-weight: bold;
 }
+    
+.reader {
+    font-size: 1.15em;
+    line-height: 1.85em;
+}
 

@@ -1,15 +1,22 @@
 <script lang="ts">
     import Card from '$lib/card.svelte';
     import Image from '$lib/image.svelte';
-    import { type articlemeta, shunned, cookie, iwdstatement, lisasu } from '$lib/articles.ts';
+    import { type articlemeta, shunned, cookie, iwdstatement, lisasu, thought, moose, draft } from '$lib/articles.ts';
 
     let articles: articlemeta[] = [
         shunned,
         iwdstatement,
         lisasu,
-        cookie
+        cookie,
+        thought,
+        moose,
+        draft
     ];
 </script>
+
+<svelte:head>
+    <title>The Pony Express</title>
+</svelte:head>
 
 <div class="container">
     {#each articles as article, i}
@@ -26,7 +33,8 @@
         display: grid;
         grid-template-areas:
           "a b c"
-          "d b e";
+          "d b e"
+          "f g h";
         gap: 35px;
 
         box-sizing: border-box;
