@@ -1,13 +1,24 @@
-<script>
+<script lang="ts">
     import Card from '$lib/card.svelte';
     import Image from '$lib/image.svelte';
+    import { type articlemeta, shunned, cookie, iwdstatement, lisasu } from '$lib/articles.ts';
+
+    let articles: articlemeta[] = [
+        shunned,
+        iwdstatement,
+        lisasu,
+        cookie
+    ];
 </script>
 
 <div class="container">
-    <Card arr="a" title="She got him elected. Then she was shunned." preview="Thirty years ago, this whale helped Shamudy rise to power. This is the story of how he betrayed her." minutes="5"></Card>
-    <Image arr="b" src="/gilly.png" caption="Office of the President Photo"></Image>
-    <Card arr="c" title="This company was destined to fail. She saved it." preview="A spotlight on Dr. Lisa Su, the incredible mind behind AMD's recent resurgence." minutes="3"></Card>
-    <Card arr="d" title="Pres. Cookie is the single greatest threat to our freedom." preview="How mismanagement, unintellgient policy, and a lack of basic economic understanding endanger us all." minutes="2"></Card>
+    {#each articles as article, i}
+        {#if article.image != undefined}
+            <Image arr={String.fromCharCode(97 + i)} {article}></Image>
+        {:else}
+            <Card arr={String.fromCharCode(97 + i)} {article}></Card>
+        {/if}
+    {/each}
 </div>
 
 <style>

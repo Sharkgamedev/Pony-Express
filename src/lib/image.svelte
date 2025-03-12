@@ -1,15 +1,16 @@
-<script>
-    export let src;
+<script lang="ts">
+    import { type articlemeta } from '$lib/articles.ts';
+    
+    export let article: articlemeta;
 
-    export let caption;
-    export let arr;
+    export let arr: string;
 </script>
 
-<div style="grid-area: {arr}">
-    <img src={src}>
+<a style="grid-area: {arr}" href="/articles/{article.slug}" title={article.title}>
+    <img src={article.image} alt={article.alt}>
 
-    <p>{caption}</p>
-</div>
+    <p>{article.credit}</p>
+</a>
 
 <style>
     div {

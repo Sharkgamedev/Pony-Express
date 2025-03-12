@@ -1,17 +1,16 @@
 <script lang="ts">
-    export let title: string;
-    export let preview: string;
+    import { type articlemeta } from '$lib/articles.ts';
 
-    export let minutes: number;
+    export let article: articlemeta;
 
     export let arr;
 </script>
 
-<a href="/" style="grid-area: {arr}">
+<a href="/articles/{article.slug}" style="grid-area: {arr}" title={article.title}>
     <div>
-        <h2>{title}</h2>
-        <p>{preview}</p>
-        <span>{minutes} min read</span>
+        <h2>{article.title}</h2>
+        <p>{article.preview}</p>
+        <span>{article.time} min read</span>
     </div>
 </a>
 
