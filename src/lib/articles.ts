@@ -84,3 +84,105 @@ export var thought = {
     byline: "OWEN SILVA"
 } as articlemeta;
 
+export var whalewar = {
+    title: "EXTRAVAGANT WAR DRAGS ON INTO 7TH MONTH",
+    preview: "They can barely afford to keep the lights on, but still the Whales support us with another $34 billion in aid.",
+    time: 3,
+    slug: "whales-support",
+    date: "May 14th, 2023",
+    byline: "OWEN SILVA"
+} as articlemeta;
+
+export var socialmedia = {
+    title: "Social Media is singlehandedley destroying society",
+    preview: "How we lost sight of what is important. And how to find it again.",
+    time: 3,
+    slug: "social-media",
+    date: "May 14th, 2023",
+    byline: "BILLIE, special to the Pony Express",
+} as articlemeta;
+
+export var normal = {
+    title: "For western nations, life returns to normal",
+    preview: "'Second Great Animal War' a distant memory for many",
+    time: 4,
+    slug: "return-normal",
+    date: "October 23rd, 2023",
+    byline: "JEN GRAIN",
+} as articlemeta;
+
+export var eels = {
+    title: "REPORT: Eels planning to invade lobsters",
+    preview: "GAOUA tries to squander fears it cannot handle a conflict with the Eels.",
+    time: 4,
+    slug: "eels-invade",
+    date: "October 23rd, 2023",
+    byline: "CHARLEIGH DRAOUI",
+} as articlemeta;
+
+export var plead = {
+    title: "Horses Plead as 2nd Dinosaur Armour Division Trapped",
+    preview: "Unearths memories of invasion of Meedra",
+    time: 3,
+    slug: "horses-plead",
+    date: "October 23rd, 2023",
+    byline: "OWEN SILVA",
+} as articlemeta;
+
+export var march = {
+    title: "Choclate's 12-Day March to End The Civil War",
+    preview: "A first hand account from a soldier that defended Pony Planet.",
+    time: 5,
+    slug: "12-day-march",
+    date: "December 27th, 2023",
+    byline: "JACK REACHER, special to the Pony Express",
+} as articlemeta;
+
+export var planet = {
+    title: "Why is it called Pony Planet?",
+    preview: "The incredible history and deep meaning of our planet's name.",
+    time: 4,
+    image: "articles/horse.jpg",
+    alt: "Choclate on board a Choclatebot spaceship",
+    credit: "Erika Wittlieb",
+    slug: "why-pony-planet",
+    date: "December 27th, 2023",
+    byline: "APPA CHERRY",
+} as articlemeta;
+
+export var civilwar = {
+    title: "The Pony Planet Civil War",
+    preview: "As trillions celebrate re-unification day, a brief history of the Civil War.",
+    time: 8,
+    slug: "history-civil-war",
+    date: "December 27th, 2023",
+    byline: "OWEN SILVA",
+} as articlemeta;
+
+export var livessaved = {
+    title: "They had no escape. These volunteers created one.",
+    preview: "9/11 in the nation of the United States, and the differing faces of terrorism.",
+    time: 3,
+    slug: "terrorism",
+    date: "June 5th, 2024",
+    byline: "OWEN SILVA",
+} as articlemeta;
+
+export var spiral = {
+    title: "SPIRAL!",
+    preview: "$PPSE closed several points below pessimistic estimations. What does it mean for the economy?",
+    time: 3,
+    slug: "spiral",
+    date: "June 5th, 2024",
+    byline: "NASH SWO",
+} as articlemeta;
+
+export var corruption = {
+    title: "Choclate Moving Against the Grand Army Of the United Horses?",
+    preview: "A look into disappearing military funds, and the pockets they are really going to.",
+    time: 3,
+    slug: "corruption",
+    date: "June 5th, 2024",
+    byline: "SYDNEY CHAMPAGNE, special to the Pony Express",
+} as articlemeta;
+
