@@ -24,6 +24,7 @@ export var shunned = {
     time: 5,
     slug: "shamelia",
     date: "March 8th, 2025",
+    tag: "International Women's Day",
     byline: "CRIS GREAN",
 } as articlemeta;
 
@@ -42,6 +43,7 @@ export var lisasu = {
     time: 3,
     slug: "lisa-su",
     date: "March 8th, 2025",
+    tag: "International Women's Day",
     byline: "OWEN SILVA",
 } as articlemeta;
 
@@ -51,9 +53,10 @@ export var iwdstatement= {
     time: 2,
     slug: "iwd-statement",
     date: "March 8th, 2025",
-    image: 'articles/statement.png',
+    image: '/articles/statement.png',
     credit: 'Office of the President Photo',
     alt: 'Presidents Gilly and Kawasaki in Office',
+    tag: "International Women's Day",
     byline: "OFFICE OF THE PRESIDENT",
 } as articlemeta;
 
@@ -135,6 +138,7 @@ export var march = {
     time: 5,
     slug: "12-day-march",
     date: "December 27th, 2023",
+    tag: "The Pony Planet Civil War",
     byline: "JACK REACHER, special to the Pony Express",
 } as articlemeta;
 
@@ -142,11 +146,12 @@ export var planet = {
     title: "Why is it called Pony Planet?",
     preview: "The incredible history and deep meaning of our planet's name.",
     time: 4,
-    image: "articles/horse.jpg",
+    image: "/articles/horse.jpg",
     alt: "Choclate on board a Choclatebot spaceship",
     credit: "Erika Wittlieb",
     slug: "why-pony-planet",
     date: "December 27th, 2023",
+    tag: "The Pony Planet Civil War",
     byline: "APPA CHERRY",
 } as articlemeta;
 
@@ -156,6 +161,7 @@ export var civilwar = {
     time: 8,
     slug: "history-civil-war",
     date: "December 27th, 2023",
+    tag: "The Pony Planet Civil War",
     byline: "OWEN SILVA",
 } as articlemeta;
 

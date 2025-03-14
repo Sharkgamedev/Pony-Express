@@ -47,9 +47,9 @@
           "d b e"
           "f g h"
           "i j k"
-          "l m n"
-          "o p q"
-          "r s t";
+          "l m k"
+          "n o p"
+          "q r s";
         gap: 35px;
 
         box-sizing: border-box;
