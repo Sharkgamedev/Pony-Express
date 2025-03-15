@@ -3,7 +3,7 @@
 </script>
 
 <a title={edition} href="/editions/{edition}.pdf">
-    <img src="/editions-previews/{edition}.png" {edition} alt="The {edition} edition" />
+    <img src="/editions-previews/{edition}.jpg" {edition} alt="The {edition} edition" />
     <h2>{edition} Edition</h2>
 </a>
 

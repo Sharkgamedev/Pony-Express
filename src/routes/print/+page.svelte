@@ -2,11 +2,11 @@
     import Print from '$lib/print.svelte';
 
     let editions = [
-        "December 30th, 2022",
-        "May 14th, 2023",
-        "October 23rd, 2023",
-        "December 27th, 2023",
         "June 5th, 2024",
+        "December 27th, 2023",
+        "October 23rd, 2023",
+        "May 14th, 2023",
+        "December 30th, 2022",
     ];
 </script>
 

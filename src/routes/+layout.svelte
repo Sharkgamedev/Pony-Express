@@ -1,6 +1,11 @@
 <script>
     import '../app.css';
     import Navbar from '../lib/navbar.svelte';
+
+    async function translate() {
+        let translator = await import('$lib/translator.ts');
+        translator.translate();
+    }
 </script>
 
 <div>
@@ -14,7 +19,7 @@
 
     <footer>
         <span>© Pony Express, Pony Express Editors</span>
-        <a>Translate into Neighlish</a>
+        <button on:click={() => translate()}>Translate into Neighlish</button>
     </footer>
 </div>
 
@@ -40,6 +45,24 @@
         padding: 15px 0 15px 0;
 
         min-height: 70px;
+    }
+
+    button {
+        border: none;
+        outline: none;
+
+        background-color: unset;
+        color: #147d58;
+
+        cusor: pointer;
+
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    button:hover {
+        text-decoration: underline;
+        cusor: pointer;
     }
 </style>
 
