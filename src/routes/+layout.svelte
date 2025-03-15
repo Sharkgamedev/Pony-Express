@@ -63,7 +63,7 @@
         background-color: unset;
         color: #147d58;
 
-        cusor: pointer;
+        cursor: pointer;
 
         font-size: 1em;
         font-weight: bold;
@@ -71,7 +71,7 @@
 
     button:hover {
         text-decoration: underline;
-        cusor: pointer;
+        cursor: pointer;
     }
 </style>
 
