@@ -28,18 +28,18 @@
                 <p style="flex: 1; font-size: 0.7vw;">
                     WEATHER <br />
                     <span id="js-weather">
-                        Chargement... Weather map on accuweather.com</span> <a onclick="trans()"
+                        Chargement... Weather map on accuweather.com</span> <a style="display: none" onclick="trans()"
                         href="javascript:void(0);">Translate to Neighlish</a>
                 </p>
             </div>
             <div class="headerInfoBox">
-                <p>
-                    <a style="cursor: pointer; color: steelblue; user-select: none;" id="js-back"">< PREV</a>  
+                <p style="border-right: 1px solid black">
+                    <a style="cursor: pointer; display: none; color: steelblue; user-select: none;" id="js-back"">< PREV</a>  
                     <span id="js-volume">VOL. CLXVII ... No 57,-/-/-</span>
-                    <a style="cursor: pointer; color: steelblue; user-select: none;" id="js-forward"">NEXT ></a>  
+                    <a style="cursor: pointer; visibility: hidden; color: steelblue; user-select: none;" id="js-forward"">NEXT ></a>  
                 </p>
-                <p style="font-size: 10px;" class="align-middle hiddenOnMobile">The Pony Express Company</p>
-                <p id="js-date">PONY PLANET, -----, ---- ---, ----</p>
+                <p style="font-size: 16px; width: 100%; text-align: center; border-right: 1px solid black" class="align-middle hiddenOnMobile">The Pony Express Company</p>
+                <p id="js-date" style="padding-left: 100px">PONY PLANET, -----, ---- ---, ----</p>
                 <div style="width: 100%;"></div>
                 <p id="js-price" class="text-end hiddenOnMobile">$-.--</p>
             </div>
@@ -96,6 +96,8 @@
         document.getElementById('js-back').onclick = () => loadArticle(currentId - 1);
         document.getElementById('js-forward').onclick = () => loadArticle(currentId + 1);
 
+        window.loadBack = () => loadArticle(currentId - 1);
+
         function loadArticle(id = 0) {
             fetch(`./content/${articles[id]}`).then(raw => raw.json().then(data => {
                 document.getElementById('js-volume').innerText = data.volume;
@@ -114,19 +116,20 @@
                 document.getElementById('js-midTitle').innerText = data.middleArticle.heading;
 
                 if (window.matchMedia("(min-width: 2000px)")) {
-                    document.getElementById('js-midText1').innerText = data.middleArticle.content.substr(0, data.middleArticle.content.length / 3);
-                    document.getElementById('js-midText2').innerText = data.middleArticle.content.substr(data.middleArticle.content.length / 3, data.middleArticle.content.length / 1.5);
-                    document.getElementById('js-midText3').innerText = data.middleArticle.content.substr((data.middleArticle.content.length / 3) * 2, data.middleArticle.content.length);
+                    let length = data.middleArticle.content.length;
+                    document.getElementById('js-midText1').innerText = data.middleArticle.content.substring(0, length / 3);
+                    document.getElementById('js-midText2').innerText = data.middleArticle.content.substring(length / 3, length * (2/3));
+                    document.getElementById('js-midText3').innerText = data.middleArticle.content.substring(length * (2/3), length);
                 }
                 else {
-                    document.getElementById('js-midText1').innerText = data.middleArticle.content.substr(0, data.middleArticle.content.length / 2);
-                    document.getElementById('js-midText2').innerText = data.middleArticle.content.substr(data.middleArticle.content.length / 2, data.middleArticle.content.length / 2);
+                    document.getElementById('js-midText1').innerText = data.middleArticle.content.substring(0, data.middleArticle.content.length / 2);
+                    document.getElementById('js-midText2').innerText = data.middleArticle.content.substring(data.middleArticle.content.length / 2, data.middleArticle.content.length);
                 }
 
                 document.getElementById('js-rightTitle').innerText = data.rightArticle.title;
                 document.getElementById('js-rightSubhead').innerText = data.rightArticle.subheading;
-                document.getElementById('js-rightText1').innerText = data.rightArticle.content.substr(0, data.rightArticle.content.length / 2);
-                document.getElementById('js-rightText2').innerText = data.rightArticle.content.substr(data.rightArticle.content.length / 2, data.rightArticle.content.length);
+                document.getElementById('js-rightText1').innerText = data.rightArticle.content.substring(0, data.rightArticle.content.length / 2);
+                document.getElementById('js-rightText2').innerText = data.rightArticle.content.substring(data.rightArticle.content.length / 2, data.rightArticle.content.length);
             
                 currentId = id;
             }));
