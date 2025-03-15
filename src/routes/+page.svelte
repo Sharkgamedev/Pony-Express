@@ -52,6 +52,8 @@
           "q r s";
         gap: 35px;
 
+        padding-bottom: 30px;
+
         box-sizing: border-box;
     }
 
@@ -81,6 +83,12 @@
               "r";
 
             padding: 5px 4% 5px 4%;
+        }
+    }
+
+    @media screen and (max-width: 300px) {
+        .container {
+            padding: 0 4% 0 4% !important;
         }
     }
 </style>

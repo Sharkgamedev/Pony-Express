@@ -93,6 +93,7 @@
 
         label {
             display: block;
+            cusor: pointer;
         }
 
         .list {
@@ -131,9 +132,19 @@
         }
     }
 
+    @media screen and (max-width: 400px) {
+        .container {
+            padding: 0;
+        }
+
+        .logo {
+            font-size: 1.4em;
+        }
+    }
+    
     @media screen and (max-width: 320px) {
         .logo {
-            font-size: 1.2em;
+            font-size: 1.2em !important;
         }
 
         .list {
@@ -142,6 +153,12 @@
 
         ul a {
             font-size: 1em;
+        }
+    }
+
+    @media screen and (max-width: 220px) {
+        .logo {
+            font-size: 0.8em !important;
         }
     }
 </style>

@@ -15,7 +15,7 @@
 
 </svelte:head>
 
-<div class="reader">
+<div class="reader-box">
     
     {#if article.tag != undefined}
         <div class="banner">
@@ -25,13 +25,12 @@
 
     <h1>{article.title}</h1>
     <h2>{article.preview}</h2>
-    <h3>By {article.byline}</h3>
-    <h4>{article.date}</h4>
+    <h3>By {article.byline} on {article.date}</h3>
     
     {#if article.image != undefined}
         <img src={article.image} alt={article.alt} />
     {:else}
-        <div style="min-height: 50px;"></div>
+        <div style="min-height: 1vw;"></div>
     {/if}
 
     <slot />
@@ -39,7 +38,7 @@
 </div>
 
 <style>
-    .reader {
+    .reader-box {
         max-width: 600px;
         margin: auto;
 
@@ -49,10 +48,13 @@
     }
 
     .banner {
-        min-width: 100%;
+        min-width: calc(100% - 10px);
         text-align: center;
 
+        box-sizing: border-box;
         padding: 5px;
+
+        margin: auto;
 
         background-color: orange;
     }
@@ -61,17 +63,58 @@
         max-width: 100%;
     }
 
+    h1 {
+        margin-bottom: 5px;
+    }
+
     h2 {
         font-weight: normal;
         font-size: 1.3em;
+
+        margin: 0;
     }
     
     h3, h4 {
         font-weight: normal;
     }
 
+    h3 {
+        color: #3A3B3C;
+        font-size: 1em;
+    }
+
     h4 {
         margin: 0;
+    }
+
+    @media screen and (max-width: 420px) {
+        .banner {
+            margin-left: 5px;
+            margin-right: 5px;
+
+            min-width: calc(100% - 20px);
+
+            font-size: 0.8em;
+            line-height: 1em;
+        }
+
+        .reader-box {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        h1 {
+            font-size: 1.4em;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1em;
+        }
+
+        h3 {
+            font-size: 0.8em;
+        }
     }
 </style>
 
