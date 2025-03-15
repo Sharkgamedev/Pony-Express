@@ -74,17 +74,13 @@
         margin: 0;
     }
     
-    h3, h4 {
+    h3 {
         font-weight: normal;
     }
 
     h3 {
         color: #3A3B3C;
         font-size: 1em;
-    }
-
-    h4 {
-        margin: 0;
     }
 
     @media screen and (max-width: 420px) {

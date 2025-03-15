@@ -8,6 +8,15 @@
     }
 </script>
 
+<svelte:head>
+    <meta property="og:title" content="The Pony Express" />
+    <meta property="og:site_name" content="The Pony Express" />
+    <meta property="og:image" content="/social.jpg">
+    <meta name="image" content="/social.jpg">
+    <meta property="og:description" content="Pony Planet's Premier News Source, reporting on the things that matter. Independent. Transparent. Relevant." />
+    <meta name="description" content="Pony Planet's Premier News Source, reporting on the things that matter. Independent. Transparent. Relevant." />
+</svelte:head>
+
 <div>
     <span>
         <Navbar></Navbar>
